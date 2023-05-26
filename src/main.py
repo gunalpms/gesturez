@@ -1,60 +1,25 @@
 import cv2
 import mediapipe as mp
-import time 
+import time
+import Tracker
 
+ptime = 0
+ctime = 0
 cap = cv2.VideoCapture(0)
 
-handModel = mp.solutions.hands
-
-hands = handModel.Hands()
-
-draw = mp.solutions.drawing_utils
-
-ct = 0
-pt = 0
+model = Tracker.handDetector()
 
 while True:
+    success, img = cap.read()
+    img = model.findHands(img)
+    landmarksList = model.findPosition(img)
+    if len(landmarksList) != 0:
+        print(landmarksList[4])
 
-    s, im = cap.read()
+    ctime = time.time()
+    fps = 1 / (ctime - ptime)
+    ptime = ctime
 
-    imrgb = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
-
-    res = hands.process(imrgb)
-
-    # print(res.multi_hand_landmarks)
-
-    if res.multi_hand_landmarks:
-        for hl in res.multi_hand_landmarks:
-            xlist = []
-            ylist = []
-           
-            for i, mark in enumerate(hl.landmark):
-                
-                h, w, c = im.shape
-                xc, yc = int(mark.x*w), int(mark.y*h)
-                # print(str(i) + "    " + str(xc) + "     " + str(yc))
-
-                xlist.append(xc)
-                ylist.append(yc)
-            print("XLIST")
-            print(xlist[8])
-            print("YLIST")
-            print(ylist[8])
-         
-        draw.draw_landmarks(im, hl)
-
-    ct = time.time()
-    fps = 1 / (ct-pt)
-    pt = ct
-
-    cv2.putText(im, str(int(fps)), (10, 70), 
-    cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 255), 3)
-    
-
-
-    cv2.imshow("Image", im)
+    cv2.putText(img, str(int(fps)), (30, 80), cv2.FONT_HERSHEY_PLAIN, 2, (255, 0, 255) , 4)
+    cv2.imshow("test", img)
     cv2.waitKey(1)
-
-
-
-
