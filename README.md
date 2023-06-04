@@ -23,3 +23,13 @@ To close the camera window, open main.py and comment out lines 101 and 102 befor
 If the brightness gesture crashes the program or doesn't work, chances are the brightness of your monitor
 can't be controlled from within Windows settings. To prevent crashing, modify the contents of the brightness functions
 such that the function content is only the keyword pass. The brightness functions are located in actions.py
+
+##### ============================
+
+### TODO
+
+* More functionality
+* More robust gesture detection model
+* Improved performance
+* Less janky volume controls
+* Fix lag when calling brightness adjust (if possible)
