@@ -10,6 +10,12 @@
 
 Make sure python is installed and you have downloaded the source code.
 
+After installing python, use pip to install the dependencies. The dependencies are:
+
+* opencv-python
+* mediapipe
+* pyautogui
+
 Open cmd and navigate to the src direcory. Run main.py within the cmd to execute the program.
 
 To close the camera window, open main.py and comment out lines 101 and 102 before executing.
