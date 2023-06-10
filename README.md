@@ -1,7 +1,7 @@
 # gesturez
-### Windows webcam gesture control. Tested on Windows 10 22H2.
-##### ============================
-#### Use your webcam to:
+## Windows webcam gesture control. Tested on Windows 10 22H2.
+============================
+### Use your webcam to:
 * Adjust volume
 * Adjust brightness
 * Switch apps using alt+tab 
@@ -42,7 +42,7 @@ _Show the fingers to the camera and remove them from frame shortly afterwards._
 
 ![image](https://github.com/gunalpms/gesturez/assets/80674364/4be3ba7d-bee5-4d75-a14c-bb04bab2e1e5)
 
-##### ============================
+============================
 
 ### TODO
 
