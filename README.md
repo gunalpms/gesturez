@@ -6,7 +6,7 @@
 * Adjust brightness
 * Switch apps using alt+tab 
 
-### Usage:
+### Setup:
 
 Make sure python is installed and you have downloaded the source code.
 
@@ -23,6 +23,24 @@ To close the camera window, open main.py and comment out lines 101 and 102 befor
 If the brightness gesture crashes the program or doesn't work, chances are the brightness of your monitor
 can't be controlled from within Windows settings. To prevent crashing, modify the contents of the brightness functions
 such that the function content is only the keyword pass. The brightness functions are located in actions.py
+
+### Gestures:
+Hold your hand approximately 30cm from the camera for best results. 
+
+#### 1) Adjusting volume (thumb and index finger):
+_Hold close for decreasing, hold far apart for increasing. Fingers must be relatively horizontal._
+
+![image](https://github.com/gunalpms/gesturez/assets/80674364/773fbe89-446d-49d3-a958-411cb34ea318)
+
+#### 2) Adjusting brightness (thumb and middle finger): 
+_Hold close for decreasing, hold far apart for increasing. Fingers must be relatively horizontal._
+
+![image](https://github.com/gunalpms/gesturez/assets/80674364/95f8f5b5-62c9-4b94-9c08-dd0e9a816b7d)
+
+#### 3) Application switch / alt+tsb (index, middle and ring fingers):
+_Show the fingers to the camera and remove them from frame shortly afterwards._
+
+![image](https://github.com/gunalpms/gesturez/assets/80674364/4be3ba7d-bee5-4d75-a14c-bb04bab2e1e5)
 
 ##### ============================
 
